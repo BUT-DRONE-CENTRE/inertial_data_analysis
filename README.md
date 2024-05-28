@@ -136,8 +136,8 @@ hardware_data_paths:
   gps_hardware: "/imu/hardware/gps.csv"
 
 # Estimator algorithm (options: "fourati", "ekf", "madgwick", "uav", "test")
-#ahrs_alg: "ekf" # ideal for real UAV
-ahrs_alg: "fourati" #ideal for simulated UAV
+#ahrs_alg: "ekf" # recommended for real UAV
+ahrs_alg: "fourati" #recommended for simulated UAV
 
 # Data to plot
 plot_data:
