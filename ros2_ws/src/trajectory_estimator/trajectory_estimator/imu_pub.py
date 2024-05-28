@@ -13,7 +13,7 @@ with open(config_path, "r") as file:
     config = yaml.safe_load(file)
 
 root = config["root"]
-ros2_path_gps = root+config["ros2_paths"]["imu"]
+ros2_path_imu = root + config["ros2_paths"]["imu"]
 
 class ImuTrajectoryPublisher(Node):
     def __init__(self):
