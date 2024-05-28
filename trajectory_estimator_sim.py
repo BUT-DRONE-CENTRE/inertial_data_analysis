@@ -17,6 +17,11 @@ path_gps_hardware = root + config["hardware_data_paths"]["gps_hardware"]
 ahrs_alg = config["ahrs_alg"]
 plot_data = config["plot_data"]
 
+if root == "/path/to/your/project":
+    raise Exception("YOU HAVE TO CHANGE ROOT DIRECTORY IN CONFIG.YAML!")
+elif root[-1] == "/":
+    raise Exception("BAD PATH FORMATTING LAST SYMBOL CAN NOT BE '/'")
+
 # Načtení souborů pro let
 gps = pd.read_csv(path_gps_sim)
 imu = pd.read_csv(path_imu_sim)
