@@ -17,6 +17,11 @@ path_gps_hardware = root + config["hardware_data_paths"]["gps_hardware"]
 ahrs_alg = config["ahrs_alg"]
 plot_data = config["plot_data"]
 
+if root == "/path/to/your/project":
+    raise Exception("YOU HAVE TO CHANGE ROOT DIRECTORY IN CONFIG.YAML!")
+elif root[-1] == "/":
+    raise Exception("BAD PATH FORMATTING LAST SYMBOL CANNOT BE '/'")
+
 # Nastavení parametrů letu a načtení dat z CSV souborů
 flight_length = 50  # Délka letu v sekundách
 to_s = 1000000  # Konverzní konstanta z mikrosekund na sekundy a obráceně
