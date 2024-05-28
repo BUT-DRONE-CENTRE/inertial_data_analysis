@@ -1,0 +1,39 @@
+# Set the root directory of your project
+root: "/path/to/your/project"
+
+# ROS2 paths
+ros2_paths:
+  imu: "/imu/imu_trajectory.csv"
+  gps: "/imu/gps_trajectory.csv"
+
+# Simulation data paths
+simulation_data_paths:
+  imu_sim: "/imu/sim/trajectory3/sensor_combined.csv"
+  odo_sim: "/imu/sim/trajectory3/odo.csv"
+  gps_sim: "/imu/sim/trajectory3/gps.csv"
+
+# Hardware data paths
+hardware_data_paths:
+  imu_hardware: "/imu/hardware/sensor_combined.csv"
+  magnetometer_hardware: "/imu/hardware/mag.csv"
+  odo_hardware: "/imu/hardware/odo.csv"
+  gps_hardware: "/imu/hardware/gps.csv"
+
+# Estimator algorithm (options: "fourati", "ekf", "madgwick", "uav", "test")
+#ahrs_alg: "ekf" # recommended for real UAV
+ahrs_alg: "fourati" # recommended for simulated UAV
+
+# Data to plot
+plot_data:
+  #  - "gyro"
+  #  - "gyro_filter"
+  #  - "acc"
+  #  - "acc_filter"
+  #  - "mag"
+  #  - "mag_filter"
+  #  - "local_acc"
+  #  - "local_velocity"
+  #  - "local_position"
+  - "trajectory"
+  - "trajectory_precision"
+  - "euler_angles"
