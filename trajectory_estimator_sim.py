@@ -20,7 +20,7 @@ plot_data = config["plot_data"]
 if root == "/path/to/your/project":
     raise Exception("YOU HAVE TO CHANGE ROOT DIRECTORY IN CONFIG.YAML!")
 elif root[-1] == "/":
-    raise Exception("BAD PATH FORMATTING LAST SYMBOL CAN NOT BE '/'")
+    raise Exception("BAD PATH FORMATTING LAST SYMBOL CANNOT BE '/'")
 
 # Načtení souborů pro let
 gps = pd.read_csv(path_gps_sim)
