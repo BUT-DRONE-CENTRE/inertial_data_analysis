@@ -13,7 +13,7 @@ with open(config_path, "r") as file:
     config = yaml.safe_load(file)
 
 root = config["root"]
-ros2_path_gps = root+config["ros2_paths"]["gps"]
+ros2_path_gps = root + config["ros2_paths"]["gps"]
 
 class GpsTrajectoryPublisher(Node):
     def __init__(self):
