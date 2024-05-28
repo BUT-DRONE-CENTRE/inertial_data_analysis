@@ -15,6 +15,11 @@ with open(config_path, "r") as file:
 root = config["root"]
 ros2_path_gps = root + config["ros2_paths"]["gps"]
 
+if root == "/path/to/your/project":
+    raise Exception("YOU HAVE TO CHANGE ROOT DIRECTORY IN CONFIG.YAML!")
+elif root[-1] == "/":
+    raise Exception("BAD PATH FORMATTING LAST SYMBOL CANNOT BE '/'")
+
 class GpsTrajectoryPublisher(Node):
     def __init__(self):
         super().__init__("gps_path")
